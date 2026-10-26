@@ -1,0 +1,23 @@
+{
+  "source": "Windows host",
+  "access": {
+    "host-only": {
+      "ip": "192.168.56.10",
+      "tcp_8080_reachable": true
+    },
+    "NAT": {
+      "ip": "10.0.2.15",
+      "tcp_8080_reachable": false
+    },
+    "LAN": {
+      "ip": "10.224.25.184",
+      "tcp_8080_reachable": false
+    }
+  },
+  "health": {
+    "http_status": 200,
+    "body": {
+      "status": "ok"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+099fb61b-f256-4cab-8a04-6655541cf3a3
+enabled
+MainPID=2042
+NRestarts=1
+User=llamafile
+ActiveState=active
+SubState=running

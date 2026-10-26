@@ -1,0 +1,43 @@
+Oct 26 22:18:33 linux-lab systemd[1]: Started llamafile.service - Llamafile Bonsai-1.7B REST API (host-only).
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.169 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.554 W srv  llama_server: -----------------
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.554 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.555 W srv  llama_server: this can be a security risk (cross-origin attacks)
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.555 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.009.555 W srv  llama_server: -----------------
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.041.593 I srv  llama_server: sandbox: pledge("stdio anet rpath") active
+Oct 26 22:18:33 linux-lab sh[1697]: 0.00.044.796 I srv    load_model: loading model '/zip/Bonsai-1.7B.gguf'
+Oct 26 22:18:35 linux-lab sh[1697]: 0.02.503.496 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+Oct 26 22:18:38 linux-lab sh[1697]: 0.05.563.320 I cmn          init: llama threadpool init, n_threads = 1
+Oct 26 22:18:40 linux-lab sh[1697]: 0.06.964.643 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+Oct 26 22:18:40 linux-lab sh[1697]: 0.06.985.729 I srv  llama_server: model loaded
+Oct 26 22:18:40 linux-lab sh[1697]: 0.06.985.754 I srv  llama_server: listening on http://192.168.56.10:8080
+Oct 26 22:18:40 linux-lab sh[1697]: 0.06.985.755 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+Oct 26 22:18:40 linux-lab sh[1697]: 0.06.985.755 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508
+Oct 26 22:19:20 linux-lab sh[1697]: 0.47.282.926 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+Oct 26 22:19:20 linux-lab sh[1697]: 0.47.283.092 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+Oct 26 22:19:33 linux-lab sh[1697]: 1.00.436.398 I slot print_timing: id  0 | task 0 | prompt eval time =    9140.32 ms /    39 tokens (  234.37 ms per token,     4.27 tokens per second)
+Oct 26 22:19:33 linux-lab sh[1697]: 1.00.436.408 I slot print_timing: id  0 | task 0 |        eval time =    4012.95 ms /     9 tokens (  501.62 ms per token,     1.99 tokens per second)
+Oct 26 22:19:33 linux-lab sh[1697]: 1.00.436.408 I slot print_timing: id  0 | task 0 |       total time =   13153.27 ms /    48 tokens
+Oct 26 22:19:33 linux-lab sh[1697]: 1.00.436.409 I slot print_timing: id  0 | task 0 |    graphs reused =          8
+Oct 26 22:19:33 linux-lab sh[1697]: 1.00.440.745 I slot      release: id  0 | task 0 | stop processing: n_tokens = 47, truncated = 0
+Oct 26 22:20:35 linux-lab systemd[1]: llamafile.service: Main process exited, code=killed, status=9/KILL
+Oct 26 22:20:35 linux-lab systemd[1]: llamafile.service: Failed with result 'signal'.
+Oct 26 22:20:35 linux-lab systemd[1]: llamafile.service: Consumed 17.953s CPU time, 281.0M memory peak, 0B memory swap peak.
+Oct 26 22:20:38 linux-lab systemd[1]: llamafile.service: Scheduled restart job, restart counter is at 1.
+Oct 26 22:20:38 linux-lab systemd[1]: Started llamafile.service - Llamafile Bonsai-1.7B REST API (host-only).
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.006.429 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.007.803 W srv  llama_server: -----------------
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.007.925 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.008.003 W srv  llama_server: this can be a security risk (cross-origin attacks)
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.008.073 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.008.252 W srv  llama_server: -----------------
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.038.472 I srv  llama_server: sandbox: pledge("stdio anet rpath") active
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.043.014 I srv    load_model: loading model '/zip/Bonsai-1.7B.gguf'
+Oct 26 22:20:40 linux-lab sh[2042]: 0.01.213.493 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+Oct 26 22:20:41 linux-lab sh[2042]: 0.02.044.350 I cmn          init: llama threadpool init, n_threads = 1
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.737.753 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.753.746 I srv  llama_server: model loaded
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.364 I srv  llama_server: listening on http://192.168.56.10:8080
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.475 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.550 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508

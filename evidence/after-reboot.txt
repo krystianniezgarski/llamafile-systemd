@@ -1,0 +1,39 @@
+a5813368-f2c4-46cb-a42a-0966b9f367a0
+enabled
+active
+MainPID=666
+NRestarts=0
+MemoryCurrent=551694336
+MemoryPeak=551923712
+User=llamafile
+Group=llamafile
+ActiveState=active
+SubState=running
+UnitFileState=enabled
+● llamafile.service - Llamafile Bonsai-1.7B REST API (host-only)
+     Loaded: loaded (/etc/systemd/system/llamafile.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-10-26 22:22:33 CET; 1min 2s ago
+   Main PID: 666 (.ape-1.10)
+      Tasks: 10 (limit: 4606)
+     Memory: 526.1M (peak: 526.3M)
+        CPU: 5.275s
+     CGroup: /system.slice/llamafile.service
+             └─666 /var/lib/llamafile/.ape-1.10 /opt/llamafile/model.llamafile --server --host 192.168.56.10 --port 8080 --gpu disable --ctx-size 2048 --threads 1 --parallel 1 --alias bonsai-lab
+
+Oct 26 22:22:35 linux-lab sh[666]: 0.00.179.236 W srv  llama_server: -----------------
+Oct 26 22:22:35 linux-lab sh[666]: 0.00.454.719 I srv  llama_server: sandbox: pledge("stdio anet rpath") active
+Oct 26 22:22:35 linux-lab sh[666]: 0.00.466.067 I srv    load_model: loading model '/zip/Bonsai-1.7B.gguf'
+Oct 26 22:22:38 linux-lab sh[666]: 0.02.985.153 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+Oct 26 22:22:38 linux-lab sh[666]: 0.03.571.841 I cmn          init: llama threadpool init, n_threads = 1
+Oct 26 22:22:42 linux-lab sh[666]: 0.07.342.877 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+Oct 26 22:22:42 linux-lab sh[666]: 0.07.400.715 I srv  llama_server: model loaded
+Oct 26 22:22:42 linux-lab sh[666]: 0.07.401.139 I srv  llama_server: listening on http://192.168.56.10:8080
+Oct 26 22:22:42 linux-lab sh[666]: 0.07.401.156 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+Oct 26 22:22:42 linux-lab sh[666]: 0.07.401.165 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508
+lo               UNKNOWN        127.0.0.1/8 
+nat0             UP             10.0.2.15/24 
+host0            UP             192.168.56.10/24 
+lan0             UP             10.224.25.184/24 metric 100 
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.

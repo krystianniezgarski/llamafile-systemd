@@ -1,0 +1,5 @@
+Before: MainPID=1697 NRestarts=0
+Command: kill -KILL 1697
+{"status":"ok"}
+After: MainPID=2042 NRestarts=1
+PASS: systemd restarted the service and HTTP API is healthy.

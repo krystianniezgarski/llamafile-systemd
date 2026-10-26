@@ -1,0 +1,4 @@
+default via 10.0.2.2 dev nat0 proto static 
+10.0.2.0/24 dev nat0 proto kernel scope link src 10.0.2.15 
+10.224.25.0/24 dev lan0 proto kernel scope link src 10.224.25.184 metric 100 
+192.168.56.0/24 dev host0 proto kernel scope link src 192.168.56.10 

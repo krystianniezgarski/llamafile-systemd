@@ -1,0 +1,12 @@
+*.llamafile
+*.gguf
+*.zip
+*.part
+*.tmp
+__pycache__/
+.venv/
+.env
+*.key
+id_*
+known_hosts*
+password*

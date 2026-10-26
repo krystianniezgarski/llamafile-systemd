@@ -1,0 +1,20 @@
+● llamafile.service - Llamafile Bonsai-1.7B REST API (host-only)
+     Loaded: loaded (/etc/systemd/system/llamafile.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-10-26 22:20:38 CET; 5s ago
+   Main PID: 2042 (.ape-1.10)
+      Tasks: 10 (limit: 4606)
+     Memory: 275.1M (peak: 275.4M)
+        CPU: 3.585s
+     CGroup: /system.slice/llamafile.service
+             └─2042 /var/lib/llamafile/.ape-1.10 /opt/llamafile/model.llamafile --server --host 192.168.56.10 --port 8080 --gpu disable --ctx-size 2048 --threads 1 --parallel 1 --alias bonsai-lab
+
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.008.252 W srv  llama_server: -----------------
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.038.472 I srv  llama_server: sandbox: pledge("stdio anet rpath") active
+Oct 26 22:20:39 linux-lab sh[2042]: 0.00.043.014 I srv    load_model: loading model '/zip/Bonsai-1.7B.gguf'
+Oct 26 22:20:40 linux-lab sh[2042]: 0.01.213.493 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+Oct 26 22:20:41 linux-lab sh[2042]: 0.02.044.350 I cmn          init: llama threadpool init, n_threads = 1
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.737.753 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.753.746 I srv  llama_server: model loaded
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.364 I srv  llama_server: listening on http://192.168.56.10:8080
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.475 W srv  llama_server: NOTICE: server default port will be changed to :9931 in a future release
+Oct 26 22:20:42 linux-lab sh[2042]: 0.03.754.550 W srv  llama_server:         ref: https://github.com/ggml-org/llama.cpp/pull/26508

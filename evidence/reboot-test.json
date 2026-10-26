@@ -1,0 +1,9 @@
+{
+  "boot_id_before": "099fb61b-f256-4cab-8a04-6655541cf3a3",
+  "boot_id_after": "a5813368-f2c4-46cb-a42a-0966b9f367a0",
+  "boot_id_changed": true,
+  "service_started_automatically": true,
+  "health": {
+    "status": "ok"
+  }
+}

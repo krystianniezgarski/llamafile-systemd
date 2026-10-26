@@ -1,0 +1,1 @@
+   2042       1 llamafile        529220 /var/lib/llamafile/.ape-1.10 /opt/llamafile/model.llamafile --server --host 192.168.56.10 --port 8080 --gpu disable --ctx-size 2048 --threads 1 --parallel 1 --alias bonsai-lab

@@ -1,0 +1,27 @@
+[Unit]
+Description=Llamafile Bonsai-1.7B REST API (host-only)
+After=network-online.target nftables.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=llamafile
+Group=llamafile
+StateDirectory=llamafile
+StateDirectoryMode=0750
+WorkingDirectory=/var/lib/llamafile
+Environment=HOME=/var/lib/llamafile
+ExecStart=/bin/sh /opt/llamafile/model.llamafile --server --host 192.168.56.10 --port 8080 --gpu disable --ctx-size 2048 --threads 1 --parallel 1 --alias bonsai-lab
+Restart=on-failure
+RestartSec=3s
+TimeoutStopSec=30s
+MemoryAccounting=yes
+LimitCORE=0
+UMask=0027
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

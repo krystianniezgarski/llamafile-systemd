@@ -1,0 +1,9 @@
+MainPID=2042
+NRestarts=1
+MemoryCurrent=288567296
+MemoryPeak=288829440
+User=llamafile
+Group=llamafile
+ActiveState=active
+SubState=running
+UnitFileState=enabled

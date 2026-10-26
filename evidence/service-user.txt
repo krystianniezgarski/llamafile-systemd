@@ -1,0 +1,1 @@
+llamafile:x:999:988::/var/lib/llamafile:/usr/sbin/nologin
