@@ -2,6 +2,8 @@
 
 Na VM **Linux-Lab, Ubuntu Server 24.04.3**, uruchomiono **Bonsai-1.7B jako llamafile 0.10.6**. Jeden plik zawiera silnik i wagi. Usługa działa jako użytkownik `llamafile`, startuje z systemem, jest automatycznie odtwarzana po awarii i udostępnia API tylko na **192.168.56.10:8080**.
 
+Publiczne repozytorium: <https://github.com/krystianniezgarski/llamafile-systemd>. Zgodność z każdym punktem polecenia: [CHECKLIST.md](CHECKLIST.md).
+
 Data testów: **26.10.2026**. Polecenie zadania: [ZADANIE.md](ZADANIE.md). Źródło modelu, przypięta wersja i SHA-256: [MODEL.md](MODEL.md).
 
 ## 1. Wymagania i sieć
@@ -29,7 +31,13 @@ sudo apt install -y curl git openssh-server nftables python3
 
 ## 2. Przeniesienie projektu i modelu
 
-Skopiuj to repozytorium do VM przez `scp` albo po opublikowaniu sklonuj własny adres repozytorium. Przykład z PowerShella Windows:
+Na nowej VM pobierz projekt z publicznego GitHub:
+
+```bash
+git clone https://github.com/krystianniezgarski/llamafile-systemd.git
+```
+
+Alternatywnie skopiuj lokalny katalog z Windowsa przez `scp`. Przykład z PowerShella Windows:
 
 ```powershell
 scp -r .\llamafile-systemd student@192.168.56.10:/home/student/
